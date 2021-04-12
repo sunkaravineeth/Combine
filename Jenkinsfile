@@ -7,12 +7,6 @@ pipeline{
                     steps{
                         echo "Compile"
                     }
-                    steps{
-                        echo "Compile1"
-                    }
-                    steps{
-                        echo "Compile2"
-                    }
                 }
                 stage("build"){
                     steps{
