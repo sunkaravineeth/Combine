@@ -1,11 +1,24 @@
 pipeline{
     agent any
     stages{
-        stage("SCM"){
+        stage("Compile"){
             steps{
-                 echo "Good morning-------------------------------------------"
-                 sh "mvn clean package"
-                 echo "Good Eveng-------------------------------------------"
+                echo "Compile completed"
+            }
+        }
+        stage("Build"){
+            steps{
+                echo "Build completed"
+            }
+        }
+        stage("test"){
+            steps{
+                echo "test completed"
+            }
+        }
+        stage("deploy"){
+            steps{
+                echo "deploy completed"
             }
         }
     }
