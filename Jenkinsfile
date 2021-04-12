@@ -1,7 +1,6 @@
 pipeline{
     agent any
     stages{
-        parallel{
             stage("Compile"){
             steps{
                 echo "Compile completed"
@@ -25,7 +24,6 @@ pipeline{
                 echo "deploy completed"
                 sleep 3
             }
-        }
         }
     }
 }
