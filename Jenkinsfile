@@ -1,28 +1,28 @@
 pipeline{
     agent any
     stages{
-            stage("Compile"){
-            steps{
-                echo "Compile completed"
-                sleep 3
-            }
-        }
-        stage("Build"){
-            steps{
-                echo "Build completed"
-                sleep 3
-            }
-        }
-        stage("test"){
-            steps{
-                echo "test completed"
-                sleep 3
-            }
-        }
-        stage("deploy"){
-            steps{
-                echo "deploy completed"
-                sleep 3
+        stage("dependent jobs"){
+            parallel{
+                stage("Compile"){
+                    steps{
+                        echo "Compile"
+                    }
+                }
+                stage("build"){
+                    steps{
+                        echo "build"
+                    }
+                }
+                stage("test"){
+                    steps{
+                        echo "test"
+                    }
+                }
+                stage("deploy"){
+                    steps{
+                        echo "deploy"
+                    }
+                }
             }
         }
     }
