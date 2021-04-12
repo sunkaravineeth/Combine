@@ -1,10 +1,10 @@
 pipeline{
-  agent any 
-    stages("SCM"){
-      stage{
-        steps{
-          echo "Happy------------------------------------"
+    agent any
+    stages{
+        stage("SCM"){
+            steps{
+                 echo "Good morning-------------------------------------------"
+            }
         }
-      }
     }
 }
